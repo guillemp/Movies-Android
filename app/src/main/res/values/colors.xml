@@ -6,4 +6,5 @@
     <color name="colorHistory">#16a085</color>
     <color name="colorWatchlist">#8e44ad</color>
     <color name="colorBlocklist">#e74c3c</color>
+    <color name="transparent">#00000000</color>
 </resources>

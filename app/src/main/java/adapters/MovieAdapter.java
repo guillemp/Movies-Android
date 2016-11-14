@@ -2,6 +2,10 @@ package adapters;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.Color;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +15,7 @@ import android.widget.TextView;
 
 import com.guillemp.movies.R;
 import com.squareup.picasso.Picasso;
+import com.squareup.picasso.Target;
 
 import java.util.List;
 
@@ -40,6 +45,9 @@ public class MovieAdapter extends ArrayAdapter<Movie> {
 
         TextView title = (TextView) view.findViewById(R.id.title);
         title.setText(movie.getTitle());
+
+        TextView rating = (TextView) view.findViewById(R.id.rating);
+        rating.setText(String.format("%.2f", movie.getImdbRating()));
 
         return view;
     }
